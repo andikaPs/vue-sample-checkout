@@ -1,7 +1,25 @@
-# Vue 3 + Vite
+<h3 align="center">VUE SAMPLE CHECKOUT</h3>
+<p align="center">i'm currently learning vue js, this respository is for testing my skill for vue js</p>
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<img src="src/assets/banner.png" width="100%" alt="">
 
-## Recommended IDE Setup
+### Languages and Tools
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- Vue Js
+- Vue router
+- Vite JS
+- Axios
+- Tailwindcss
+- Google Font
+- Feather Icons
+- Visual Studio Code
+
+### Clone This Repo
+
+```bash
+git clone https://github.com/andikaPs/vue-sample-checkout.git
+```
+
+- <code>cd vue-sample-checkout</code>
+- <code>yarn</code>
+- <code>yarn dev</code>
