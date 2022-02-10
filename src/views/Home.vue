@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="col-span-4 border-l-2 border-neutral-200 pl-4">
-      <Cart :cart="listCart" @clearCart="handleCart" />
+      <Cart :cart="listCart" @clearCart="handleCart" :total="total" />
     </div>
   </div>
 </template>
@@ -53,15 +53,15 @@ export default {
   },
   setup() {
     const { menu, getAll, findMenu, load, loadMenu, filterMenu } = useMenu()
-    const { listCart, getAllCart } = useCart()
+    const { listCart, getAllCart, total, getTotal } = useCart()
     const keyword = ref('')
-
     filterMenu(
       localStorage.getItem('current-menu')
         ? localStorage.getItem('current-menu')
         : 'All'
     )
     getAllCart()
+    getTotal()
 
     const handleKeyword = (search) => {
       if (search) {
@@ -79,6 +79,7 @@ export default {
     const handleCart = (m) => {
       setTimeout(() => {
         getAllCart()
+        getTotal()
       }, 1000)
     }
 
@@ -90,6 +91,7 @@ export default {
       handleChangeMenu,
       listCart,
       handleCart,
+      total,
     }
   },
 }

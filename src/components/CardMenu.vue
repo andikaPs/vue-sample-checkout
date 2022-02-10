@@ -49,9 +49,9 @@ export default {
       setTimeout(() => {
         menu.value.forEach((item) => {
           addToCart(item)
+          emit('addCart', m)
         })
       }, 1000)
-      emit('addCart', m)
     }
     return {
       handleClick,
