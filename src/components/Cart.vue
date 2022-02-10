@@ -28,10 +28,7 @@
   >
     <!-- image -->
     <div class="col-span-2 overflow-hidden relative">
-      <img
-        :src="`src/assets/img/${item.image}`"
-        class="w-full h-full object-cover"
-      />
+      <img :src="item.image" class="w-full h-full object-cover" />
     </div>
     <!-- body -->
     <div class="col-span-3 flex justify-center flex-col">

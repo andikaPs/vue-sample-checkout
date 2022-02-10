@@ -20,7 +20,7 @@
     >
       <!-- image -->
       <div class="w-2/5 mr-3">
-        <img :src="`src/assets/img/${m.image}`" alt="" />
+        <img :src="m.image" alt="" />
       </div>
       <!-- body -->
       <div>
