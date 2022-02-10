@@ -1,0 +1,387 @@
+{
+  "all": [
+    {
+      "id": 1,
+      "name": "9 Pcs Bukect",
+      "price": 45000,
+      "image": "special/9_pcs_bucket.png",
+      "qty": 1
+    },
+    {
+      "id": 2,
+      "name": "Snack Bucket 1 BBQ",
+      "price": 50000,
+      "image": "special/snack_bucket_1_bbq.png",
+      "qty": 1
+    },
+    {
+      "id": 3,
+      "name": "Super Family HCC",
+      "price": 53000,
+      "image": "special/super_family_hcc.png",
+      "qty": 1
+    },
+    {
+      "id": 4,
+      "name": "Winger Combo BBQ",
+      "price": 50000,
+      "image": "special/winger_combo_bbq.png",
+      "qty": 1
+    },
+    {
+      "id": 5,
+      "name": "Wings Bucket",
+      "price": 40000,
+      "image": "special/wings_bucket.png",
+      "qty": 1
+    },
+    {
+      "id": 6,
+      "name": "Colonel Yakiniku Combo",
+      "price": 55000,
+      "image": "combo/colonel_yakiniku_combo.png",
+      "qty": 1
+    },
+    {
+      "id": 7,
+      "name": "Crispy Box",
+      "price": 35000,
+      "image": "combo/crispy_box.png",
+      "qty": 1
+    },
+    {
+      "id": 8,
+      "name": "Fish Fillet Combo",
+      "price": 35000,
+      "image": "combo/fish_fillet_combo.png",
+      "qty": 1
+    },
+    {
+      "id": 9,
+      "name": "Kombo Krispy",
+      "price": 35000,
+      "image": "combo/kombo_krispy.png",
+      "qty": 1
+    },
+    {
+      "id": 10,
+      "name": "Zuper Box",
+      "price": 35000,
+      "image": "combo/zuper_box.png",
+      "qty": 1
+    },
+    {
+      "id": 11,
+      "name": "BBQ Bento",
+      "price": 40000,
+      "image": "praktis/bbq_bento.png",
+      "qty": 1
+    },
+    {
+      "id": 12,
+      "name": "Krispy Burger",
+      "price": 30000,
+      "image": "praktis/krispy_burger.png",
+      "qty": 1
+    },
+    {
+      "id": 13,
+      "name": "O.R. Burger",
+      "price": 30000,
+      "image": "praktis/or_burger.png",
+      "qty": 1
+    },
+    {
+      "id": 14,
+      "name": "Oriental Bento",
+      "price": 35000,
+      "image": "praktis/oriental_bento.png",
+      "qty": 1
+    },
+    {
+      "id": 15,
+      "name": "Twisty",
+      "price": 35000,
+      "image": "praktis/twisty.png",
+      "qty": 1
+    },
+    {
+      "id": 16,
+      "name": "Chococha Float",
+      "price": 20000,
+      "image": "drinks/chococha_float.png",
+      "qty": 1
+    },
+    {
+      "id": 17,
+      "name": "Fanta",
+      "price": 20000,
+      "image": "drinks/fanta.png",
+      "qty": 1
+    },
+    {
+      "id": 18,
+      "name": "Lovlychee Float",
+      "price": 20000,
+      "image": "drinks/lovlychee_float.png",
+      "qty": 1
+    },
+    {
+      "id": 19,
+      "name": "Mango Float",
+      "price": 20000,
+      "image": "drinks/mango_float.png",
+      "qty": 1
+    },
+    {
+      "id": 20,
+      "name": "Sprite",
+      "price": 20000,
+      "image": "drinks/sprite.png",
+      "qty": 1
+    },
+    {
+      "id": 21,
+      "name": "Yubari Float",
+      "price": 20000,
+      "image": "drinks/yubari_float.png",
+      "qty": 1
+    },
+    {
+      "id": 22,
+      "name": "Double Chocolate Krushers",
+      "price": 25000,
+      "image": "coffee/double_chocolate_krushers.png",
+      "qty": 1
+    },
+    {
+      "id": 23,
+      "name": "Ice Blended Green Tea",
+      "price": 25000,
+      "image": "coffee/ice_blended_green_tea.png",
+      "qty": 1
+    },
+    {
+      "id": 24,
+      "name": "Iced Blended Chocolate",
+      "price": 25000,
+      "image": "coffee/iced_blended_chocolate.png",
+      "qty": 1
+    },
+    {
+      "id": 25,
+      "name": "Iced Lemon Tea",
+      "price": 25000,
+      "image": "coffee/iced_lemon_tea.png",
+      "qty": 1
+    },
+    {
+      "id": 26,
+      "name": "Iced Strawberry TEa",
+      "price": 25000,
+      "image": "coffee/iced_strawberry_tea.png",
+      "qty": 1
+    }
+  ],
+  "spesial": [
+    {
+      "id": 1,
+      "name": "9 Pcs Bukect",
+      "price": 45000,
+      "image": "special/9_pcs_bucket.png",
+      "qty": 1
+    },
+    {
+      "id": 2,
+      "name": "Snack Bucket 1 BBQ",
+      "price": 50000,
+      "image": "special/snack_bucket_1_bbq.png",
+      "qty": 1
+    },
+    {
+      "id": 3,
+      "name": "Super Family HCC",
+      "price": 53000,
+      "image": "special/super_family_hcc.png",
+      "qty": 1
+    },
+    {
+      "id": 4,
+      "name": "Winger Combo BBQ",
+      "price": 50000,
+      "image": "special/winger_combo_bbq.png",
+      "qty": 1
+    },
+    {
+      "id": 5,
+      "name": "Wings Bucket",
+      "price": 40000,
+      "image": "special/wings_bucket.png",
+      "qty": 1
+    }
+  ],
+  "combo": [
+    {
+      "id": 6,
+      "name": "Colonel Yakiniku Combo",
+      "price": 55000,
+      "image": "combo/colonel_yakiniku_combo.png",
+      "qty": 1
+    },
+    {
+      "id": 7,
+      "name": "Crispy Box",
+      "price": 35000,
+      "image": "combo/crispy_box.png",
+      "qty": 1
+    },
+    {
+      "id": 8,
+      "name": "Fish Fillet Combo",
+      "price": 35000,
+      "image": "combo/fish_fillet_combo.png",
+      "qty": 1
+    },
+    {
+      "id": 9,
+      "name": "Kombo Krispy",
+      "price": 35000,
+      "image": "combo/kombo_krispy.png",
+      "qty": 1
+    },
+    {
+      "id": 10,
+      "name": "Zuper Box",
+      "price": 35000,
+      "image": "combo/zuper_box.png",
+      "qty": 1
+    }
+  ],
+  "praktis": [
+    {
+      "id": 11,
+      "name": "BBQ Bento",
+      "price": 40000,
+      "image": "praktis/bbq_bento.png",
+      "qty": 1
+    },
+    {
+      "id": 12,
+      "name": "Krispy Burger",
+      "price": 30000,
+      "image": "praktis/krispy_burger.png",
+      "qty": 1
+    },
+    {
+      "id": 13,
+      "name": "O.R. Burger",
+      "price": 30000,
+      "image": "praktis/or_burger.png",
+      "qty": 1
+    },
+    {
+      "id": 14,
+      "name": "Oriental Bento",
+      "price": 35000,
+      "image": "praktis/oriental_bento.png",
+      "qty": 1
+    },
+    {
+      "id": 15,
+      "name": "Twisty",
+      "price": 35000,
+      "image": "praktis/twisty.png",
+      "qty": 1
+    }
+  ],
+  "drinks": [
+    {
+      "id": 16,
+      "name": "Chococha Float",
+      "price": 20000,
+      "image": "drinks/chococha_float.png",
+      "qty": 1
+    },
+    {
+      "id": 17,
+      "name": "Fanta",
+      "price": 20000,
+      "image": "drinks/fanta.png",
+      "qty": 1
+    },
+    {
+      "id": 18,
+      "name": "Lovlychee Float",
+      "price": 20000,
+      "image": "drinks/lovlychee_float.png",
+      "qty": 1
+    },
+    {
+      "id": 19,
+      "name": "Mango Float",
+      "price": 20000,
+      "image": "drinks/mango_float.png",
+      "qty": 1
+    },
+    {
+      "id": 20,
+      "name": "Sprite",
+      "price": 20000,
+      "image": "drinks/sprite.png",
+      "qty": 1
+    },
+    {
+      "id": 21,
+      "name": "Yubari Float",
+      "price": 20000,
+      "image": "drinks/yubari_float.png",
+      "qty": 1
+    }
+  ],
+  "coffee": [
+    {
+      "id": 22,
+      "name": "Double Chocolate Krushers",
+      "price": 25000,
+      "image": "coffee/double_chocolate_krushers.png",
+      "qty": 1
+    },
+    {
+      "id": 23,
+      "name": "Ice Blended Green Tea",
+      "price": 25000,
+      "image": "coffee/ice_blended_green_tea.png",
+      "qty": 1
+    },
+    {
+      "id": 24,
+      "name": "Iced Blended Chocolate",
+      "price": 25000,
+      "image": "coffee/iced_blended_chocolate.png",
+      "qty": 1
+    },
+    {
+      "id": 25,
+      "name": "Iced Lemon Tea",
+      "price": 25000,
+      "image": "coffee/iced_lemon_tea.png",
+      "qty": 1
+    },
+    {
+      "id": 26,
+      "name": "Iced Strawberry TEa",
+      "price": 25000,
+      "image": "coffee/iced_strawberry_tea.png",
+      "qty": 1
+    }
+  ],
+  "menu": [
+    "All",
+    "Spesial",
+    "Combo",
+    "Praktis",
+    "Drinks",
+    "Coffee"
+  ],
+  "cart": []
+}
