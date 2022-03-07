@@ -118,6 +118,7 @@ export const store = createStore({
                         .post(`${baseUrl}cart/`, item)
                         .then(function (response) {
                             dispatch('getAllCart')
+                            getters.getTotal
                         })
                         .catch(function (error) {
                             console.log(error)
