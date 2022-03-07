@@ -6,6 +6,7 @@
 ### Languages and Tools
 
 - Vue Js
+- Vuex
 - Vue router
 - Vite JS
 - Axios
