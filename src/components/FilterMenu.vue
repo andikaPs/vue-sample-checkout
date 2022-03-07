@@ -1,64 +1,52 @@
 <template>
-  <div class="flex w-full overflow-auto lg:overflow-visible">
-    <button
-      class="
-        text-sm
-        font-normal
-        inline-block
-        px-6
-        py-2
-        mx-3
-        rounded-md
-        shadow-lg shadow-stone-200
-        cursor-pointer
-      "
-      :class="getClass(menu)"
-      v-for="menu in listMenu"
-      :key="menu"
-      @click="handleMenu(menu)"
-    >
-      <span class="text-neutral-500">{{ menu }}</span>
-    </button>
-  </div>
+    <div class="flex w-full overflow-auto lg:overflow-visible">
+        <button
+            class="
+                text-sm
+                font-normal
+                inline-block
+                px-6
+                py-2
+                mx-3
+                rounded-md
+                shadow-lg shadow-stone-200
+                cursor-pointer
+            "
+            :class="getClass(menu)"
+            v-for="menu in listMenu"
+            :key="menu"
+            @click="handleMenu(menu)"
+        >
+            <span class="text-neutral-500">{{ menu }}</span>
+        </button>
+    </div>
 </template>
 
-<script>
-import { ref } from '@vue/reactivity'
-import useMenu from '../composables/useMenu'
-export default {
-  name: 'FilterMenu',
-  setup(props, context) {
-    const currentMenu = ref(
-      localStorage.getItem('current-menu')
-        ? localStorage.getItem('current-menu')
-        : 'all'
-    )
+<script setup>
+import { computed, onMounted } from '@vue/runtime-core'
+import { useStore } from 'vuex'
 
-    const { listMenu, getListMenu } = useMenu()
-    getListMenu()
+const store = useStore()
 
-    const handleMenu = (menu) => {
-      currentMenu.value = menu
-      localStorage.setItem('current-menu', menu)
-      context.emit('changeMenu', menu)
-      getClass(menu)
-    }
-
-    const getClass = (menu) => {
-      if (currentMenu.value == menu) {
+const listMenu = computed(() => store.state.listMenu)
+const getClass = (menu) => {
+    if (store.state.currentMenu == menu) {
         return 'bg-red-300 text-slate-100'
-      } else {
+    } else {
         return 'bg-stone-200 text-neutral-500'
-      }
     }
-    return {
-      currentMenu,
-      listMenu,
-      getClass,
-      handleMenu,
-    }
-  },
 }
+
+const handleMenu = (menu) => {
+    store.commit('setCurrentMenu', menu)
+    store.dispatch('filterMenu', menu)
+    localStorage.setItem('current-menu', menu)
+    getClass(menu)
+}
+
+onMounted(() => {
+    store.dispatch('getListMenu')
+})
 </script>
 
 <style>
