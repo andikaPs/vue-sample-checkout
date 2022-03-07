@@ -194,6 +194,7 @@ const checkout = () => {
 
 onMounted(() => {
     store.dispatch('getAllCart')
+    store.dispatch('countTotal')
 })
 </script>
 

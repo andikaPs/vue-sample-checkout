@@ -82,15 +82,16 @@ export const store = createStore({
                 console.log(error)
             }
         },
-        async getAllCart({ commit }) {
+        async getAllCart({ commit, dispatch }) {
             try {
                 let { data } = await axios.get(`${baseUrl}cart/`)
                 commit('setCart', await data)
+                dispatch('countTotal')
             } catch (error) {
                 console.log(error)
             }
         },
-        addToCart({ commit, dispatch, getters }, item) {
+        addToCart({ dispatch }, item) {
             axios
                 .get(`${baseUrl}cart/${item.id}`)
                 .then((res) => {
@@ -106,7 +107,6 @@ export const store = createStore({
                             })
                             .then((res) => {
                                 dispatch('getAllCart')
-                                getters.getTotal
                             })
                             .catch((err) => console.log(err))
                     } else {
@@ -118,7 +118,6 @@ export const store = createStore({
                         .post(`${baseUrl}cart/`, item)
                         .then(function (response) {
                             dispatch('getAllCart')
-                            getters.getTotal
                         })
                         .catch(function (error) {
                             console.log(error)
@@ -171,6 +170,11 @@ export const store = createStore({
                         .catch((err) => console.log(err))
                 })
                 .catch((err) => console.log(err))
+        },
+        countTotal({ state, commit }) {
+            let total = 0
+            state.cart.forEach((cart) => (total += cart.price * cart.qty))
+            commit('setTotal', total)
         },
     },
 })
