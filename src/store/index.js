@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
-const baseUrl = 'https://ala-kfc-json.herokuapp.com/'
+const baseUrl = 'https://ala-kfc-json.vercel.app/'
 export const store = createStore({
     state: {
         menu: [],
@@ -71,13 +71,9 @@ export const store = createStore({
             }
         },
         async filterMenu({ commit }, keyword) {
-            commit('setLoading', true)
-            // loadMenu.value = false
             try {
                 let { data } = await axios.get(`${baseUrl}${keyword}`)
                 commit('setMenu', await data)
-                commit('setLoading', true)
-                // loadMenu.value = true
             } catch (error) {
                 console.log(error)
             }

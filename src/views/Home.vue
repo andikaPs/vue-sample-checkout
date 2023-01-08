@@ -20,7 +20,6 @@
 
             <FilterMenu />
 
-            <CardMenu />
             <div
                 v-if="load"
                 class="
@@ -35,6 +34,7 @@
             >
                 Please Wait ...
             </div>
+            <CardMenu />
         </div>
         <div class="col-span-4 border-l-2 border-neutral-200 pl-4">
             <Cart />
@@ -52,7 +52,7 @@ import { useStore } from 'vuex'
 import { computed } from '@vue/runtime-core'
 const store = useStore()
 
-const load = computed(() => store.state.load)
+const load = computed(() => store.state.loading)
 </script>
 
 <style>
