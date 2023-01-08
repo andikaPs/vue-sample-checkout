@@ -55,7 +55,8 @@ export const store = createStore({
         async getAllMenu({ commit, state }) {
             commit('setLoading', true)
             try {
-                let { data } = await axios.get(`${baseUrl}${state.currentMenu}`)
+                // let { data } = await axios.get(`${baseUrl}${state.currentMenu}`)
+                let { data } = await axios.get('/src/data/db.json')
                 commit('setMenu', await data)
                 commit('setLoading', false)
             } catch (error) {
