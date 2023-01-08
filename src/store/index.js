@@ -1,13 +1,15 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import { supabase } from '../supabase'
 const baseUrl = 'https://ala-kfc-json.vercel.app/'
+
 export const store = createStore({
     state: {
         menu: [],
         cart: [],
         currentMenu: localStorage.getItem('current-menu')
             ? localStorage.getItem('current-menu')
-            : 'all',
+            : null,
         listMenu: [],
         loading: true,
         total: 0,
@@ -55,9 +57,22 @@ export const store = createStore({
         async getAllMenu({ commit, state }) {
             commit('setLoading', true)
             try {
-                // let { data } = await axios.get(`${baseUrl}${state.currentMenu}`)
-                let { data } = await axios.get('/src/data/db.json')
-                commit('setMenu', await data)
+                let data
+                if (state.currentMenu) {
+                    data = await supabase
+                        .from('product_type')
+                        .select(
+                            `
+                                *,
+                                products(*),
+                                menu_type(*)
+                            `
+                        )
+                        .eq('menu_type_id', state.currentMenu)
+                } else {
+                    data = await supabase.from('products').select()
+                }
+                commit('setMenu', data.data)
                 commit('setLoading', false)
             } catch (error) {
                 console.log(error)
@@ -65,16 +80,29 @@ export const store = createStore({
         },
         async getListMenu({ commit }) {
             try {
-                let { data } = await axios.get(`${baseUrl}menu`)
-                commit('setListMenu', await data)
+                const { data, error } = await supabase
+                    .from('menu_type')
+                    .select()
+                commit('setListMenu', data)
             } catch (error) {
                 console.log(error)
             }
         },
-        async filterMenu({ commit }, keyword) {
+        async filterMenu({ commit }, id) {
+            commit('setLoading', true)
             try {
-                let { data } = await axios.get(`${baseUrl}${keyword}`)
-                commit('setMenu', await data)
+                const { data, error } = await supabase
+                    .from('product_type')
+                    .select(
+                        `
+                        *,
+                        products(*),
+                        menu_type(*)
+                    `
+                    )
+                    .eq('menu_type_id', id)
+                commit('setMenu', data)
+                commit('setLoading', false)
             } catch (error) {
                 console.log(error)
             }
