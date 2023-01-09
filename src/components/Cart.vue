@@ -21,12 +21,12 @@
     <div class="mt-10 grid grid-cols-6 place-content-between gap-3" v-for="item in cart" :key="item.id">
         <!-- image -->
         <div class="col-span-2 overflow-hidden relative">
-            <img :src="item.image" class="w-full h-full object-cover" />
+            <img :src="item.products.image" class="w-full h-full object-cover" />
         </div>
         <!-- body -->
         <div class="col-span-3 flex justify-center flex-col">
-            <h3 class="text-sm text-neutral-700">{{ item.name }}</h3>
-            <p class="text-xs text-neutral-500 mt-2">Rp. {{ item.price }}</p>
+            <h3 class="text-sm text-neutral-700">{{ item.products.name }}</h3>
+            <p class="text-xs text-neutral-500 mt-2">Rp. {{ item.products.price }}</p>
         </div>
         <!-- action -->
         <div class="col-span-1 flex flex-col justify-center items-center">
